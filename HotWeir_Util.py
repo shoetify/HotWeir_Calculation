@@ -1,7 +1,38 @@
 import re
-
+import os
 
 class HotWeir_Util:
+
+    @staticmethod
+    def get_lists_file(file_number):
+
+        """
+        This function get all the electric signal with a given file name and return the list of the signals.
+
+        :param string: Just the file name you want to get the value(e.g., "10017").
+        :return: A list of float number of this file.
+        """
+
+        file_name = file_number + '.txt'
+        # Check if the file exists and read the file
+        if os.path.isfile(file_name):
+            print(f"Reading '{file_name}' ...")
+
+            # Read the file
+            try:
+                with open(file_name, 'r') as file:
+                    content = file.read()
+                    lines = content.split('\n')
+                    list = []
+                    for line in lines:
+                        if line:
+                            list.append(float(line))
+                    return (list)
+            except Exception as e:
+                print(f"An error occurred while reading the file: {e}")
+        else:
+            print(f"Error: The file '{file_name}' does not exist.")
+            exit()
 
     @staticmethod
     def extract_range_from_string(string):

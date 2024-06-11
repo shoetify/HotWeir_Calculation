@@ -1,34 +1,8 @@
 import yaml
-import re
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 from HotWeir_Util import HotWeir_Util
-
-
-def get_mean_value_from_a_file(file_number):
-    file_name = file_number + '.txt'
-    # Check if the file exists and read the file
-    if os.path.isfile(file_name):
-        print(f"Reading '{file_name}' ...")
-
-        # Read the file
-        try:
-            with open(file_name, 'r') as file:
-                content = file.read()
-                lines = content.split('\n')
-                sum = 0.0
-                count = 0
-                for line in lines:
-                    if line:
-                        sum += float(line)
-                        count += 1
-                return (sum / count)
-        except Exception as e:
-            print(f"An error occurred while reading the file: {e}")
-    else:
-        print(f"Error: The file '{file_name}' does not exist.")
-        exit()
 
 
 # Load the YAML configuration file
@@ -54,7 +28,8 @@ for windSpeed in real_windSpeed_Hz:
 file_numbers = HotWeir_Util.extract_range_from_string(config['Files_number']['Calibration_file'])
 signal_mean = []
 for file_number in file_numbers:
-    signal_mean.append(get_mean_value_from_a_file(file_number))
+    electric_value = HotWeir_Util.get_lists_file(file_number)
+    signal_mean.append(np.mean(electric_value))
 
 
 # PolyFit the electric signal to real wind speed.
