@@ -2,9 +2,10 @@ General:
   app_name: HotWeir_Calibration
   version: 1.0.0
 
-Calibration_File:
+Files_number:
   #File name of the calibration file. "10017-10024" means from 10017 to 10024
-  file_number: 10017-10024
+  Calibration_file: 10017-10024
+  WindSpeed_file: 10025-10050
 
 Polyfit_Parameter:
   #The corresponding motor speed. Note: one calibrated file number should correspond to one wind speed.
