@@ -1,7 +1,31 @@
 import re
 import os
+import openpyxl
 
 class HotWeir_Util:
+
+    @staticmethod
+    def write_to_excel(headers, datas, file_name):
+
+        """
+        This function use to write data into excel file.
+
+        :param:
+            headers: list, the list of the header.
+            datas: list, the list of data (length of headers should equal to rows of datas)
+            file_name: String, the output excel file name.
+        :return: NAN
+        """
+
+        wb = openpyxl.Workbook()
+        ws = wb.active
+
+        ws.append(headers)
+        for data in datas:
+            ws.append(data)
+
+        wb.save(file_name)
+        print(f"Data has been written to {file_name}")
 
     @staticmethod
     def get_lists_file(file_number):

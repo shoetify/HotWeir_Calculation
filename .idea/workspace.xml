@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7d7134a-da05-4c35-a70d-b08662478797" name="Changes" comment="">
+    <list default="true" id="f7d7134a-da05-4c35-a70d-b08662478797" name="Changes" comment="Update the structure of the code">
       <change afterPath="$PROJECT_DIR$/HotWeir_Mean&amp;RMS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HotWeir_Util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HotWeir_Calibation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HotWeir_Calibation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HotWeir_Calibation.py" beforeDir="false" afterPath="$PROJECT_DIR$/HotWeir_Calibation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotWeir_Util.py" beforeDir="false" afterPath="$PROJECT_DIR$/HotWeir_Util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +24,14 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="shoetify &lt;93328716+shoetify@users.noreply.github.com&gt;" />
+        <option value="Difei" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -49,14 +54,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.HotWeir_Calibation.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.HotWeir_Calibation.executor": "Run",
+    "Python.HotWeir_Mean&RMS.executor": "Run",
+    "Python.HotWeir_Util.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,6 +80,29 @@
       <option name="presentableId" value="Default" />
       <updated>1717917579917</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update the previous code, make it more organized and reuseable.">
+      <option name="closed" value="true" />
+      <created>1718074671785</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718074671785</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update the structure of the code">
+      <option name="closed" value="true" />
+      <created>1718076267511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718076267511</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Update the previous code, make it more organized and reuseable." />
+    <MESSAGE value="Update the structure of the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the structure of the code" />
   </component>
 </project>
