@@ -1,6 +1,7 @@
 General:
   app_name: HotWeir_Calibration
   version: 1.0.0
+  link: https://github.com/shoetify/HotWeir_Calculation
 
 Files_number:
   #File name of the calibration file. "10017-10024" means from 10017 to 10024
