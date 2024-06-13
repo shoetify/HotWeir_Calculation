@@ -30,9 +30,9 @@ for WindSpeed_file in WindSpeed_files:
     RMS_value.append(np.std(windSpeeds))
 
 # Write the result into excel.
-headers = ['mean value', 'RMS value']
+headers = ['file name', 'mean value', 'RMS value']
 data = []
-for mv, rms in zip(mean_value, RMS_value):
-    data.append([mv, rms])
+for fls, mv, rms in zip(WindSpeed_files, mean_value, RMS_value):
+    data.append([fls, mv, rms])
 
 HotWeir_Util.write_to_excel(headers,data,'output.xlsx')
