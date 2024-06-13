@@ -69,22 +69,40 @@ class HotWeir_Util:
         :return: A list of strings representing the numbers in the range.
         """
 
+        # Split the input string by commas to handle multiple ranges
+        ranges = string.split(',')
+
+        all_numbers = []
         pattern = r'(\d+)-(\d+)'
-        match = re.match(pattern, string)
 
-        if match:
-            start_str = match.group(1)
-            end_str = match.group(2)
+        for range_str in ranges:
+            range_str = range_str.strip()
+            match = re.match(pattern, range_str)
 
-            if len(start_str) != len(end_str):
-                raise ValueError("Start and end numbers must have the same length")
+            if match:
+                # Extract start and end parts of the range
+                start_str = match.group(1)
+                end_str = match.group(2)
 
-            start_num = int(start_str)
-            end_num = int(end_str)
+                # Ensure both start and end parts have the same length
+                if len(start_str) != len(end_str):
+                    raise ValueError("Start and end numbers must have the same length")
 
-            return [str(num).zfill(len(start_str)) for num in range(start_num, end_num + 1)]
-        else:
-            raise ValueError("The input string does not match the expected pattern")
+                # Convert start and end parts to integers
+                start_num = int(start_str)
+                end_num = int(end_str)
+
+                # Generate the list of numbers in the range with leading zeros preserved
+                all_numbers.extend([str(num).zfill(len(start_str)) for num in range(start_num, end_num + 1)])
+            else:
+                # Handle single numbers
+                single_number_match = re.match(r'\d+', range_str)
+                if single_number_match:
+                    all_numbers.append(range_str.zfill(len(range_str)))
+                else:
+                    raise ValueError(f"The input string '{range_str}' does not match the expected pattern")
+
+        return all_numbers
 
     @staticmethod
     def extract_numbers_from_string(string):
@@ -106,7 +124,7 @@ if __name__ == "__main__":
     util = HotWeir_Util()
 
     # Test extract_range_from_string
-    range_string = "0014-0016"
+    range_string = "0014-0016, 0018-0020, 0025"
     print("Range:", util.extract_range_from_string(range_string))
 
     # Test extract_numbers_from_string

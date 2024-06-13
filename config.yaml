@@ -1,10 +1,12 @@
 General:
-  app_name: HotWeir_Calibration
-  version: 1.0.0
+  app_name: HotWeir_Calculation
+  version: 1.1.0
   link: https://github.com/shoetify/HotWeir_Calculation
 
 Files_number:
   #File name of the calibration file. "10017-10024" means from 10017 to 10024
+  #More than one range or number is accepted, but need to separate with ','.
+  #For example, "0017-0024, 0056-0060, 0062, 0064" means from 0017 to 0024 and 0056 to 0060 and 0062 and 0064
   Calibration_file: 10017-10024
   WindSpeed_file: 10025-10051
 
