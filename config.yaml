@@ -7,12 +7,12 @@ Files_number:
   #File name of the calibration file. "10017-10024" means from 10017 to 10024
   #More than one range or number is accepted, but need to separate with ','.
   #For example, "0017-0024, 0056-0060, 0062, 0064" means from 0017 to 0024 and 0056 to 0060 and 0062 and 0064
-  Calibration_file: 10017-10024
+  Calibration_file: 0000-0006
   WindSpeed_file: 10025-10051
 
 Polyfit_Parameter:
   #The corresponding motor speed. Note: one calibrated file number should correspond to one wind speed.
-  Corresponding_windSpeed: 0 10 15 20 25 30 35 30
+  Corresponding_windSpeed: 0 15 20 25 30 35 30
 
   #Use this if using the same wind tunnel. Note: 0hz has been set to 0m/s wind speed.
   WindSpeed_relationship: y=0.1726x-0.06956
